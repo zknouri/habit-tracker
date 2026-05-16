@@ -1,4 +1,5 @@
-import { AddHabitForm } from "./components/AddHabitForm.jsx";
+import AddHabitForm from "./components/AddHabitForm.jsx";
+import HabitItem from "./components/HabitItem.jsx";
 import Header from "./components/Header.jsx";
 
 function App() {
@@ -6,7 +7,7 @@ function App() {
     <>
       <Header />
       <main>
-        <AddHabitForm />
+        <HabitItem />
       </main>
     </>
   );

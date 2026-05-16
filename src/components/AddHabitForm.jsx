@@ -1,4 +1,4 @@
-export function AddHabitForm() {
+export default function AddHabitForm() {
   return (
     <form className="bg-emerald-300 rounded-xl p-4 m-2">
       <div className="flex gap-2 mb-4">
