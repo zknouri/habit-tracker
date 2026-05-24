@@ -1,8 +1,18 @@
 import HabitItem from "./HabitItem";
 
-export default function HabitList({ habits, onDelete, onComplete }) {
+export default function HabitList({ habits, onOpen, onDelete, onComplete }) {
   return (
-    <ul>
+    <ul className="">
+      {habits.length > 0 && (
+        <div className="sticky top-4 m-4">
+          <button
+            onClick={onOpen}
+            className="bg-amber-400 hover:bg-amber-500 rounded-xl w-1/3 p-2 cursor-pointer text-gray-700 text-center text-xl shadow-gray-950 shadow-xs "
+          >
+            Add Habit
+          </button>
+        </div>
+      )}
       {habits.length > 0 &&
         habits.map((habit) => (
           <HabitItem
