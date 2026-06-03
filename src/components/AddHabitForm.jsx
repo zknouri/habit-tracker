@@ -32,20 +32,18 @@ export default function AddHabitForm({ onAdd, onClose }) {
   return (
     <form
       onSubmit={addHabitHandler}
-      className="absolute block w-md top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-emerald-300 rounded-xl p-4  shadow-2xl shadow-emerald-300 animate-fade-in"
+      className="absolute block w-[300px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-emerald-300/80 rounded-xl p-4  shadow-2xl shadow-emerald-300 animate-fade-in"
     >
-      <h2 className="text-gray-700 cursor-text text-3xl pb-4 text-center font-bold">
+      <h2 className="text-gray-700 dark:text-gray-50 cursor-text text-3xl pb-4 text-center font-bold">
         Add New Habit
       </h2>
       <div className="flex gap-2 mb-4">
-        <label className="w-[30%] text-gray-700 cursor-text" htmlFor="habit">
-          Habit name:
-        </label>
         <input
-          className="bg-gray-50 rounded-xl w-full"
+          className="bg-gray-50 dark:bg-gray-600 dark:text-gray-50 rounded-md w-full p-1"
           type="text"
           id="habit"
           name="habit"
+          placeholder="Habit name"
           maxLength="50"
         />
       </div>
@@ -53,11 +51,11 @@ export default function AddHabitForm({ onAdd, onClose }) {
         <button
           type="button"
           onClick={onClose}
-          className="bg-red-400 hover:bg-red-500 rounded-xl w-16 p-2 cursor-pointer text-gray-50"
+          className="bg-red-400 hover:bg-red-500 rounded-xl w-16 p-2 cursor-pointer dark:text-gray-50 text-gray-700"
         >
           Cancel
         </button>
-        <button className="bg-blue-400 hover:bg-blue-500 rounded-xl w-16 p-2 cursor-pointer text-gray-50">
+        <button className="bg-blue-400 hover:bg-blue-500 rounded-xl w-16 p-2 cursor-pointer dark:text-gray-50 text-gray-700">
           Add
         </button>
       </div>

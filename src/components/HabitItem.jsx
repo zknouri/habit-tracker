@@ -1,11 +1,11 @@
 export default function HabitItem({ habit, onDelete, onComplete }) {
   return (
-    <li className="flex gap-2 justify-between items-center bg-emerald-300 rounded-xl p-4 m-2 text-gray-700 animate-fade-in ">
-      <p className="text-gray-700 text-xl w-[40%]">{habit.name}</p>
+    <li className="flex gap-2 justify-between items-center bg-emerald-300/80 rounded-xl p-4 m-2 text-gray-700 dark:text-gray-50 animate-fade-in ">
+      <p className=" text-xl w-[40%]">{habit.name}</p>
       <div className="text-center">
         <p>Streaks</p>
-        <div className="bg-blue-500 rounded-full p-3 size-12 shadow-gray-950 shadow-xs">
-          <p className="text-gray-50">{habit.streakCount}</p>
+        <div className="bg-blue-400 rounded-full p-3 size-12 shadow-gray-950 shadow-xs">
+          <p className="dark:text-gray-50 text-gray-700">{habit.streakCount}</p>
         </div>
       </div>
 

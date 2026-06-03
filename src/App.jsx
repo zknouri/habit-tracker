@@ -69,6 +69,7 @@ function App() {
   function handleModalClose() {
     setOpen(false);
   }
+
   function handleModalOpen() {
     setOpen(true);
   }
@@ -81,7 +82,7 @@ function App() {
         <AddHabitForm onAdd={setHabits} onClose={handleModalClose} />
       </Modal>
       <Header />
-      <main className=" mt-30">
+      <main className="">
         {habits.length === 0 && <Section onOpen={handleModalOpen}></Section>}
         <HabitList
           habits={habits}
