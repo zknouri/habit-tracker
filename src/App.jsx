@@ -82,7 +82,7 @@ function App() {
         <AddHabitForm onAdd={setHabits} onClose={handleModalClose} />
       </Modal>
       <Header />
-      <main className="">
+      <main className="w-auto  flex justify-center">
         {habits.length === 0 && <Section onOpen={handleModalOpen}></Section>}
         <HabitList
           habits={habits}
@@ -91,6 +91,17 @@ function App() {
           onComplete={completedHabitHandler}
         />
       </main>
+      <footer className="text-center">
+        <p className="text-primary dark:text-dark-primary">
+          Made by{" "}
+          <a
+            href="https://github.com/zknouri/"
+            className="text-amber-500 hover:text-amber-600"
+          >
+            zknouri
+          </a>
+        </p>
+      </footer>
     </>
   );
 }
