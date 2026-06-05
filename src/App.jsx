@@ -74,8 +74,6 @@ function App() {
     setOpen(true);
   }
 
-  console.log(habits);
-
   return (
     <>
       <Modal open={open} onClose={handleModalClose}>
