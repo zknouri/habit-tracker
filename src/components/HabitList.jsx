@@ -1,9 +1,10 @@
 import HabitItem from "./HabitItem";
 
 export default function HabitList({ habits, onOpen, onDelete, onComplete }) {
-  return (
-    <ul className="w-full sm:w-[75%] md:w-[65%] lg:w-[55%] xl:w-[45%]">
-      {habits.length > 0 && (
+  return;
+  {
+    habits.length > 0 && (
+      <ul className="w-full sm:w-[75%] md:w-[65%] lg:w-[55%] xl:w-[45%]">
         <div className="sticky top-4 m-4">
           <button
             onClick={onOpen}
@@ -12,9 +13,8 @@ export default function HabitList({ habits, onOpen, onDelete, onComplete }) {
             Add Habit
           </button>
         </div>
-      )}
-      {habits.length > 0 &&
-        habits.map((habit) => (
+
+        {habits.map((habit) => (
           <HabitItem
             habit={habit}
             onDelete={onDelete}
@@ -22,6 +22,7 @@ export default function HabitList({ habits, onOpen, onDelete, onComplete }) {
             key={habit.id}
           />
         ))}
-    </ul>
-  );
+      </ul>
+    );
+  }
 }
