@@ -12,10 +12,7 @@ export default function HabitItem({ habit, onDelete, onComplete }) {
       {habit.isCompletedToday && (
         <div className="text-center">
           <p>Completed</p>
-          <button
-            onClick={() => onComplete(habit.id)}
-            className="bg-green-500 rounded-full size-12 shadow-gray-950 shadow-xs"
-          >
+          <button className="bg-green-500 rounded-full size-12 shadow-gray-950 shadow-xs">
             &#10003;
           </button>
         </div>
